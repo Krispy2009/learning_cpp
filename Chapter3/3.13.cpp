@@ -16,7 +16,7 @@ int main()
     //(c) 10 elements. Elements have value 42;
     vector<int> v3(10,42);
     
-    //(d) 10 elements. Elements have value 0 - default initialization.
+    //(d) 1 element. Element has value 10.
     vector<int> v4{10};
     
     //(e) 2 elements. Elements have value 10 and 42 - List initialization.
