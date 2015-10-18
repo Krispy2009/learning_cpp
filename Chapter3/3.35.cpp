@@ -13,4 +13,5 @@ int main()
     for(auto i: arr){
         std::cout << i << std::endl;
     }
+    return 0;
 }
