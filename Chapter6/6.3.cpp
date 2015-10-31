@@ -9,10 +9,12 @@ int fact(int i)
 		result *= i--;
 	}
 	std::cout << result << std::endl;
+    return result;
 }
 
 
-int main()
+/*int main()
 {
 	fact(10);
 }
+*/
