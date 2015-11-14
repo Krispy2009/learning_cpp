@@ -10,6 +10,10 @@ struct Person
 	std::string name;
 	std::string address;
 
+    Person() = default;
+    Person(const std::string &name) : name(name), address("") {}
+    Person(const std::string &address) : name(""), address(address) {}
+    Person(const std::string &name, const std::string address) : name(name), address(address){}
 
 	/*
 		using const after the function name means that this function is not
