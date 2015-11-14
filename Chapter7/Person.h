@@ -1,4 +1,9 @@
+#ifndef PERSON_HEADER
+#define PERSON_HEADER
+
 #include <string>
+#include <iostream>
+
 
 struct Person
 {
@@ -17,3 +22,18 @@ struct Person
 	std::string get_address() const { return address;}
 
 };
+
+
+std::ostream &print(std::ostream &os, const Person &person)
+{
+    os << person.name << " " << person.address;
+    return os;
+}
+
+std::istream &read(std::istream &is, Person &person)
+{
+    is >> person.name >> person.address;
+    return is;
+}
+
+#endif
