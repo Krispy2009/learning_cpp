@@ -2,10 +2,10 @@
 #include <iostream>
 
 int main(){
-	Person kostas;
-
-	std::cin >> kostas.name >> kostas.address;
-
+    std::string name, address;
+    std::cin >> name >> address;
+    Person kostas(name,address);
+    
 	std::cout << "Your name: " << kostas.get_name() << std::endl;
 	std::cout << "Your address: " << kostas.get_address() << std::endl;
 
