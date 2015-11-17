@@ -29,20 +29,12 @@ struct Person
 
 
 
-    std::ostream &print(std::ostream &os, const Person &person)
-    {
-        os << person.get_name() << " " << person.get_address();
-        return os;
-    }
-
-    std::istream &read(std::istream &is, Person &person)
-    {
-        is >> person.name >> person.address;
-        return is;
-    }
-
+    friend std::ostream &print(std::ostream&, const Person&);
+    friend std::istream &read(std::istream&, Person&);
 };
 
+    std::ostream &print(std::ostream&, const Person&);
+    std::istream &read(std::istream&, Person&);
 
 
 #endif
