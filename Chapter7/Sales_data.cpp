@@ -34,6 +34,7 @@ Sales_data& Sales_data::combine(const Sales_data& item)
  	return *this;
 }
 
+inline
 double Sales_data::avg_price() const
 {
 	if(units_sold)
