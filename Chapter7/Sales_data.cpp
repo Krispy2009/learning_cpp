@@ -26,23 +26,9 @@ Sales_data::Sales_data(std::istream &is)
  }
 
 
-
 Sales_data& Sales_data::combine(const Sales_data& item)
 {
  	units_sold += item.units_sold;
  	revenue += item.revenue;
  	return *this;
-}
-
-inline
-double Sales_data::avg_price() const
-{
-	if(units_sold)
-	{
-		return revenue/units_sold;
-	}
-	else
-	{
-		return 0;
-	}
 }
