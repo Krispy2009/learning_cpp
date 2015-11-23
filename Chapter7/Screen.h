@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "Window_mgr.h"
 class Screen {
 	public:
 		typedef std::string::size_type pos;
@@ -14,6 +14,9 @@ class Screen {
         Screen &set(char);
         Screen &set(pos, pos,char);
         Screen &display(std::ostream&);
+        
+        friend void Window_mgr::clear(ScreenIndex);
+        
 	private:
 		pos cursor = 0;
 		pos height = 0, width =0;
