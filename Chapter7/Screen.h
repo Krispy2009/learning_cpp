@@ -14,6 +14,7 @@ class Screen {
         Screen &set(char);
         Screen &set(pos, pos,char);
         Screen &display(std::ostream&);
+        pos size() const;
         
         friend void Window_mgr::clear(ScreenIndex);
         

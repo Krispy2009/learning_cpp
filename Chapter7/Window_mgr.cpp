@@ -8,7 +8,4 @@ void Window_mgr::clear(ScreenIndex i)
     s->contents = std::string(s->height*s->width, ' ');
 }
 
-int main()
-{
-    
-}
+int main(){}
