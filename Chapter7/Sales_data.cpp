@@ -20,6 +20,8 @@ std::istream &read(std::istream &is, Sales_data &item){
     return is;
 }
 
+// Ans to 7.38, 7.39: We cannot make this a default constructor (by defaulting the only parameter)
+// because there is already one and that would mean that we would have 2. No can do!
 Sales_data::Sales_data(std::istream &is)
  {
      read(is, *this);
