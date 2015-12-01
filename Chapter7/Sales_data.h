@@ -6,13 +6,20 @@
 class Sales_data {
 
 	public:
-    Sales_data() = default;
-    //This is equivalent to the above ( ex 7.14)
-    //Sales_data() : bookNo(""), units_sold(0), revenue(0) {}
-
-    Sales_data(const std::string &s) : bookNo(s) {}
     Sales_data(const std::string &s, unsigned n, double p) :
-        bookNo(s), units_sold(n), revenue(p*n) {}
+    bookNo(s), units_sold(n), revenue(p*n) { 
+        std::cout << "This is the non delegating constructor" << std::endl;
+    }
+    
+    Sales_data() : Sales_data("", 0, 0) {
+        std::cout << "This is the default constructor" << std::endl;
+    }
+
+
+    Sales_data(const std::string &s) : Sales_data(s, 0,0) {
+        std::cout << "This is the constructor that uses 1 string" << std::endl;
+    }
+
 
     Sales_data(std::istream&);
 	std::string isbn() const {return bookNo;}
